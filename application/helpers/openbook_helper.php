@@ -34,16 +34,25 @@ function include_js() {
     }
 }
 
+function sanitize($buffer) {
+
+    $search = array('/\>[^\S ]+/s', '/[^\S ]+\</s', '/(\s)+/s');
+    $replace = array('>', '<', '\\1');
+    $buffer = preg_replace($search, $replace, $buffer);
+
+    return $buffer;
+}
+
 function include_parts() {
     $ci = &get_instance();
-    
+
     $parts = array(
         array('id' => 'card', 'view' => 'card_part_view')
     );
 
     foreach ($parts as $part) {
         echo '<script id="' . $part['id'] . '" type="text/x-template" data-template="true" data-xhr="jq">';
-        echo $ci->load->view('parts/' . $part['view'], true);
+        echo sanitize($ci->load->view('parts/' . $part['view'], null, true));
         echo '</script>';
     };
 }
