@@ -1,3 +1,9 @@
 .compact {
     margin-left: 0px !important;
 }
+
+.user-icon i {
+    font-size: 25px;
+    color: #fff;
+    margin: 12px;
+}
