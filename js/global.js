@@ -6,6 +6,13 @@ OB.Bootloader = function($) {
     // called whenever the basic DOM is loaded on page
     this.onDocumentReady = function() {
              
+        // Animate the header on load, this looks fairly nice actually
+        $('#rootBrand').css('margin-left', '20px').css('opacity', 0).animate({
+            'margin-left': '-15px',
+            opacity: 1
+        }, 400);
+             
+        // Load required JS files
         Tools.load.js(OB.baseUrl + 'js/template.js', function() {
              
             Tools.load.js(OB.baseUrl + 'js/cards.js', function() {

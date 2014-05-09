@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
             </button>
             
-            <a class="navbar-brand" href="<?php echo base_url(); ?>">OpenBook</a>
+            <a id="rootBrand" class="navbar-brand" href="<?php echo base_url(); ?>">OpenBook</a>
         </div>
 
         <div class="collapse navbar-collapse" id="openBookNav">
