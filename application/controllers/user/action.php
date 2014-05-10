@@ -14,7 +14,7 @@ class Action extends CI_Controller
         /*
          * Should it load just the login section from actions model instead of the entire model?
          */
-        $this->load->model('user/actions_model.php');
+        $this->load->model('user/actions_model');
     }
     
     public function logout()
