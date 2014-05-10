@@ -3,3 +3,25 @@
     padding: 10px;
     margin-bottom: 10px;
 }
+
+/* input field for a card */
+.new-card-view {
+    margin-bottom: 20px;
+}
+
+.card-input {
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.hidden-explicit {
+    display: none;
+}
+
+#statusSubmitField {
+    margin-bottom: 15px;
+}
+
+#statusSubmitField > button {
+    margin: 5px 0px 0px 5px;
+}

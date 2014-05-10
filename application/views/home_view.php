@@ -4,6 +4,7 @@
     
         <div class="col-md-4">
             
+            <?php $this->load->view('partial/card_new_view'); ?>
             <div id="cards"></div>
             
         </div>
