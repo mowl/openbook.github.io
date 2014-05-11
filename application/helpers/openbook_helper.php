@@ -69,7 +69,8 @@ function include_parts() {
     $ci = &get_instance();
 
     $parts = array(
-        array('id' => 'card', 'view' => 'card_part_view')
+        array('id' => 'card', 'view' => 'card_part_view'),
+        array('id' => 'user', 'view' => 'user_status_part_view')
     );
 
     foreach ($parts as $part) {

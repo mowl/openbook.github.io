@@ -10,7 +10,9 @@
         </div>
         
         <div class="col-md-4">
-            Column 2
+            
+            <div id="users"></div>
+            
         </div>
         
         <div class="col-md-4">

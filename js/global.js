@@ -21,6 +21,12 @@ OB.Bootloader = function($) {
                 Cards.init();
             
             });
+            
+            Tools.load.js(OB.baseUrl + 'js/users.js', function() {
+               
+                Users.init();
+               
+            });
         
         });
              
