@@ -14,7 +14,6 @@
 
         <div class="collapse navbar-collapse" id="openBookNav">
 
-            <!-- Should be displayed for only logged in user -->
             <ul class="nav navbar-nav navbar-right">
                 
                 <li class="dropdown">
