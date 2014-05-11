@@ -1,0 +1,8 @@
+.register-form {
+    width: 400px;
+}
+
+#registrationContainer {
+    margin-top: 50px;
+    display: none;
+}

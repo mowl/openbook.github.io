@@ -17,10 +17,10 @@
                     <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password">
                 </div>
             </div>
-
+            
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-default" id="loginButton" onclick="return false;">Sign in</button>
+                    <button type="submit" class="btn btn-primary pull-right" id="loginButton" onclick="return false;">Sign in</button>
                 </div>
             </div>
 

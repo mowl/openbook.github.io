@@ -32,5 +32,9 @@ class User_Api extends CI_Controller {
          * TODO: Registration model
          */
     }
+    
+    public function isUniqueUsername() {
+        echo json_encode(true);
+    }
 
 }
