@@ -26,17 +26,86 @@ OB.Bootloader = function($) {
              
     };
 
+    // setup the Ajax infrastructure
+    this.initAjax = function() {
+       
+        OB.Api = function(apiName, action, data, callback) {
+            
+            // based on http://api.jquery.com/jquery.ajax/
+            var path = OB.baseUrl + 'api/' + apiName + '_api/' + action;
+            var ajaxCall = $.ajax;
+            
+            if (data === null || typeof data === 'undefined') {
+                data = {};
+            }
+            
+            data[OB.CSRF.name] = OB.CSRF.token;
+
+            console.log('ajax: start', path, data);
+
+            var requirements = {
+                type: 'POST',
+                url: path,
+                data: data,
+                dataType: 'json'
+            };
+            
+            requirements.success = function(result) {
+                 
+                console.log('ajax: response', result);
+                 
+                if (typeof callback !== 'undefined') {
+                    callback(result);
+                }
+                    
+            };
+            
+            requirements.error = function(xhr, ajaxOptions, thrownError) {
+                console.log('ajax: error', xhr, ajaxOptions, thrownError);
+            };
+
+            return ajaxCall(requirements);
+            
+        };
+       
+    };
+
     // called when boatloader does it's initial steps
     this.onBootloaderReady = function() {
+        
+        $(document).ready(onDocumentReady);
+        initAjax();
         
         Tools.load.css(OB.baseUrl + 'css/cards.css');
         
     }();
-    
-    $(document).ready(onDocumentReady);
-
+ 
     return {
         tools: this.tools
+    };
+    
+}(jQuery);
+
+function base_url(path) {
+    return (OB.baseUrl + path);
+}
+
+!function($) {
+    
+    $.fn.serializeObject = function() {
+        var o = {};
+        var a = this.serializeArray();
+        $.each(a, function() {
+            if (o[this.name] !== undefined) {
+                if (!o[this.name].push) {
+                    o[this.name] = [o[this.name]];
+                }
+                o[this.name].push(this.value || '');
+            } else {
+                o[this.name] = this.value || '';
+            }
+        });
+        return o;
     };
     
 }(jQuery);

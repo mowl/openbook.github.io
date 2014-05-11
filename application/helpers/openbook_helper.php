@@ -1,9 +1,20 @@
 <?php
 
-function include_css() {
+function include_css($adit_css) {
     $ci = &get_instance();
     $css_files = $ci->config->item('css');
 
+    if ($adit_css !== null) {
+        
+        foreach ($adit_css as $css_file) {
+            array_push($css_files, array(
+                'file' => $css_file,
+                'version' => '1.0'
+            ));
+        }
+       
+    }
+    
     foreach ($css_files as $css) {
         echo '<link rel="stylesheet" ';
 
@@ -17,10 +28,21 @@ function include_css() {
     }
 }
 
-function include_js() {
+function include_js($adit_js) {
     $ci = &get_instance();
     $js_files = $ci->config->item('js');
 
+     if ($adit_js !== null) {
+
+        foreach ($adit_js as $js_file) {
+            array_push($js_files, array(
+                'file' => $js_file,
+                'version' => '1.0'
+            ));
+        }
+        
+    }
+    
     foreach ($js_files as $js) {
         echo '<script src="';
 
