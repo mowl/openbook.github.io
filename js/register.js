@@ -60,6 +60,8 @@
     
     this.onRegisterResponse = function(response) {
         
+        // TODO: This is unfinished, make sure to display error messages too (checkup serverside)
+        
     };
     
     this.onRegisterAttempt = function($event) { 
