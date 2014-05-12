@@ -42,8 +42,6 @@
     margin-top: -40px;
     margin-right: -5px;
     float: right;
-    
-    cursor: pointer;
 }
 
 .user .hover-state > i {
@@ -55,9 +53,15 @@
 
 .user .name {
     margin: 5px;
+    margin-top: 7px;
 }
 
 .user .status {
     margin-top: 10px;
     margin-right: 10px;
+}
+
+.user-link {
+    color: #000;
+    text-decoration: none;
 }

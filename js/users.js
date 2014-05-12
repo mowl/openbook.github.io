@@ -12,13 +12,13 @@ var Users = {
         container.append(user2.render());
      
         $('.user').on('mouseenter', function() {
-            $(this).find('.hover-state').animate({width: 45}, 200);
-            $(this).find('.status-col').animate({width: '30%'}, 200);
+            $(this).find('.hover-state').animate({width: 45}, 100);
+            $(this).find('.status-col').animate({width: '30%'}, 100);
         });
         
         $('.user').on('mouseleave', function() {
-            $(this).find('.hover-state').animate({width: 0}, 200);
-            $(this).find('.status-col').animate({width: '41.66666666666667%'}, 200);
+            $(this).find('.hover-state').animate({width: 0}, 100);
+            $(this).find('.status-col').animate({width: '41.66666666666667%'}, 100);
         });
      
     }
