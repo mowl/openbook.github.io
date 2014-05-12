@@ -65,3 +65,15 @@
     color: #000;
     text-decoration: none;
 }
+
+.status-loader {
+    text-align: center;
+    padding-top: 35px;
+}
+
+.new-card {
+    overflow: hidden;
+    height: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}

@@ -13,9 +13,11 @@
                 <input id="statusUpdate" type="text" class="form-control card-input" placeholder="What are you up to today?">
                 
                 <div id="statusSubmitField" class="hidden-explicit">
-                    <button class="btn btn-success pull-right">Post</button>
-                    <button class="btn btn-default pull-right">Cancel</button>
+                    <button class="btn btn-success pull-right" id="postStatusButton">Post</button>
+                    <button class="btn btn-default pull-right" id="cancelStatusButton">Cancel</button>
                 </div>
+                
+                <div class="clearfix"></div>
             </div>
             
             <div class="tab-pane fade" id="picture">
