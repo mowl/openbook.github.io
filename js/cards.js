@@ -42,22 +42,7 @@ var Cards = {
                 pane.find('.active').show();
                 pane.find('.status-loader').remove();
                 
-                var cardRender = $(new Card('mowl', textStatus).render());
-                $('#cards').prepend(cardRender);
-                
-                var originalRender = {
-                    padding: cardRender.css('padding'),
-                    height: cardRender.outerHeight()
-                };
-                
-                cardRender.addClass('new-card');
-                
-                cardRender.animate({
-                    padding: originalRender.padding,
-                    height: originalRender.height  
-                }, 500, function() {
-                    cardRender.removeClass('new-card');
-                });
+                Cards.addNewCard('mowl', textStatus);
                 
             }, 1500);
         }
@@ -76,6 +61,27 @@ var Cards = {
         
         Cards.input.init();
         
+    },
+    
+    addNewCard: function(user, text) {
+        
+        var cardRender = $(new Card(user, text).render());
+        $('#cards').prepend(cardRender);
+                
+        var originalRender = {
+            padding: cardRender.css('padding'),
+            height: cardRender.outerHeight()
+        };
+                
+        cardRender.addClass('new-card');
+                
+        cardRender.animate({
+            padding: originalRender.padding,
+            height: originalRender.height  
+        }, 500, function() {
+            cardRender.removeClass('new-card');
+        });
+                
     }
    
     
