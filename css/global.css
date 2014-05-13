@@ -40,3 +40,11 @@
 .no-display {
     display: none;
 }
+
+#cardsView, #usersView, #conversationsView {
+    background-color: #fefefe;
+}
+
+body {
+    background-color: #ddd;
+}
