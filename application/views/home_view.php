@@ -2,7 +2,7 @@
     
     <div class="row">
     
-        <div class="col-md-4 opacity-zero" id="cardsView">
+        <div class="col-md-4 opacity-zero shadow-right-container min-height-bottom" id="cardsView">
             
             <h1 class="light-header">Stream</h1>
             
@@ -13,7 +13,7 @@
             
         </div>
         
-        <div class="col-md-4 opacity-zero" id="usersView">
+        <div class="col-md-4 opacity-zero shadow-right-container min-height-bottom" id="usersView">
             
             <h1 class="light-header">Friends</h1>
             
@@ -23,7 +23,7 @@
             
         </div>
         
-        <div class="col-md-4 opacity-zero" id="conversationsView">
+        <div class="col-md-4 opacity-zero shadow-right-container min-height-bottom" id="conversationsView">
             
             <h1 class="light-header">Conversations</h1>
             

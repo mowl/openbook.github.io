@@ -28,3 +28,12 @@
     font-weight: 300;
     font-size: 22px;
 }
+
+.shadow-right-container {
+    -webkit-box-shadow: 2px 0 5px -2px #888;
+            box-shadow: 2px 0 5px -2px #888;
+}
+
+.navbar {
+    margin-bottom: 0px !important;
+}
