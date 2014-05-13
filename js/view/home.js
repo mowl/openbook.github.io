@@ -11,6 +11,8 @@
             view.delay((i + 1) * 200).animate({opacity: 1}, 200);
         }
         
+        $('body').addClass('bgbody');
+        
     });
     
 }(jQuery);
