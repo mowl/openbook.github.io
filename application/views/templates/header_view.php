@@ -13,6 +13,12 @@
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+
+        <style>
+            body {
+                min-width: 1024px;
+            }
+        </style>
     </head>
 
     <body>

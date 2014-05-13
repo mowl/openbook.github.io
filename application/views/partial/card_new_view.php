@@ -2,7 +2,7 @@
 
     <div class="col-xs-12">
   
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-pills">
             <li class="active"><a href="#status" data-toggle="tab">Status</a></li>
             <li><a href="#picture" data-toggle="tab">Picture</a></li>
         </ul>
