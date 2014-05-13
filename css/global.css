@@ -22,3 +22,9 @@
 .opacity-zero {
     opacity: 0;
 }
+
+.light-header {
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 22px;
+}
