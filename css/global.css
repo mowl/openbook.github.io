@@ -2,10 +2,8 @@
     margin-left: 0px !important;
 }
 
-.user-icon i {
-    font-size: 25px;
-    color: #fff;
-    margin: 12px;
+.user-icon img {
+    margin-top: 7px;
 }
 
 .red {
@@ -14,4 +12,9 @@
 
 .search-field {
     width: 300px;
+}
+
+.top-nav-icon i {
+    font-size: 18px;
+    color: #fff !important;
 }

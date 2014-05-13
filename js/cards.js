@@ -42,7 +42,7 @@ var Cards = {
                 pane.find('.active').show();
                 pane.find('.status-loader').remove();
                 
-                Cards.addNewCard('mowl', textStatus);
+                Cards.addNewCard(OB.User.username, textStatus);
                 
             }, 1500);
         }

@@ -15,7 +15,8 @@
         <div class="collapse navbar-collapse" id="openBookNav">
 
             <ul class="nav navbar-nav">
-                <li class="active"><a href="<?php echo base_url('home'); ?>">Home</a></li>
+                <li class="active top-nav-icon"><a href="<?php echo base_url('home'); ?>"><i class="fa fa-home"></i></a></li>
+                <li class="top-nav-icon"><a href="<?php echo base_url('messages'); ?>"><i class="fa fa-flash"></i></a></li>
             </ul>
 
             <form class="navbar-form navbar-left" role="search">
@@ -40,8 +41,8 @@
                     </ul>
                 </li>
 
-                <li class="user-icon">
-                    <i class="fa fa-user"></i>
+                <li class="user-icon hidden-xs">
+                    <img width="35px" height="35px" src="http://localhost:8080/OpenBook/img/profileholder.png">
                 </li>
 
             </ul>
