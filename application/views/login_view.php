@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
     <div class="login-form">
-        
+
         <form class="form-horizontal" role="form" id="loginForm">
 
             <div class="form-group">
@@ -17,10 +17,11 @@
                     <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password">
                 </div>
             </div>
-            
+
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                     <button type="submit" class="btn btn-primary pull-right" id="loginButton" onclick="return false;">Sign in</button>
+                    <img src="<?php echo base_url('img/loader.gif'); ?>" id="loginLoader" class="pull-right no-display" />
                 </div>
             </div>
 

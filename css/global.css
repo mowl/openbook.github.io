@@ -36,3 +36,7 @@
 .navbar-no-margin {
     margin-bottom: 0px !important;
 }
+
+.no-display {
+    display: none;
+}

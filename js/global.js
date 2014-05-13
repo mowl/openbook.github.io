@@ -103,7 +103,7 @@ OB.Bootloader = function($) {
     }();
 
     return {
-        tools: this.tools
+        tools: this.Tools
     };
 
 }(jQuery);
@@ -135,3 +135,6 @@ function redirect(path) {
     };
 
 }(jQuery);
+
+// Link logic to OB for general use
+OB.Tools = OB.Bootloader.tools;
