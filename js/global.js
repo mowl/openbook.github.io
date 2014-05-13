@@ -96,6 +96,10 @@ function base_url(path) {
     return (OB.baseUrl + path);
 }
 
+function redirect(path) {
+    window.location = OB.baseUrl + path;
+}
+
 !function($) {
     
     $.fn.serializeObject = function() {

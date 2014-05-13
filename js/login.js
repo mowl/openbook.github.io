@@ -11,7 +11,9 @@
     
     this.onLoginResponse = function(response) {
         
-        console.log(response);
+        if (response.status) {
+            redirect('home');
+        }
         
     };
 

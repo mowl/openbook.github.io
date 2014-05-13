@@ -1,5 +1,9 @@
 <?php
 
+function to_object($data) {
+    return json_decode(json_encode($data));
+}
+
 function include_css($adit_css) {
     $ci = &get_instance();
     $css_files = $ci->config->item('css');

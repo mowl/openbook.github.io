@@ -6,3 +6,8 @@
     margin-top: 50px;
     display: none;
 }
+
+#userNameError {
+    margin-top: 6px;
+    font-size: 13px;
+}

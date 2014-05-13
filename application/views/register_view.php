@@ -5,6 +5,8 @@
         <div id="validateUsername">
             <label for="inputUsername">Username</label>
             <input id="inputUsername" type="text" class="form-control">
+            
+            <div class="red" id="userNameError"></div>
         </div>
 
         <div id="registrationContainer">

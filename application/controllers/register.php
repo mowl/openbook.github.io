@@ -1,6 +1,6 @@
 <?php
 
-class Register extends CI_Controller {
+class Register extends OB_Public_Controller {
     
     public function index() {
         $css = array('register.css');

@@ -1,6 +1,6 @@
 <?php
 
-class Login extends CI_Controller {
+class Login extends OB_Public_Controller {
     
     public function index() {
         $css = array('login.css');

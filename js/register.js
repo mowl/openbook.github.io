@@ -7,7 +7,7 @@
     
     this.onUniqueUsernameResponse = function(response) {
     
-        if (response) {
+        if (response.status) {
             
             // Username is unique
             var usernameField = $('#inputUsername');
@@ -29,6 +29,10 @@
                 }, 200);
                 
             });
+            
+        } else {
+            
+            $('#userNameError').text(response.data);
             
         }
 
@@ -60,7 +64,9 @@
     
     this.onRegisterResponse = function(response) {
         
-        // TODO: This is unfinished, make sure to display error messages too (checkup serverside)
+        if (response.status) {
+            redirect('login');
+        }
         
     };
     
@@ -71,7 +77,7 @@
         var regData = $('#registrationForm').serializeObject();
         regData.username = username;
         
-        OB.Api('user', 'register', regData, onRegisterResponse);
+        OB.Api('user', 'register', {data: regData}, onRegisterResponse);
 
     };
     

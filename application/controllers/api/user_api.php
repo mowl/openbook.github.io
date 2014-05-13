@@ -1,40 +1,46 @@
 <?php
 
-class User_Api extends CI_Controller {
-
-    public function index() {
-        /*
-         * TODO: Toss in an error here, if no action is specified or use routing?
-         */
-    }
+class User_Api extends OB_Ajax_Controller {
 
     public function login() {
 
         $this->load->model('user_model');
 
-        // This is just to illustrate a json response, we'll wrap this in a custom controller later (eg; $this->response(flag, data))
-        // once we've decided a suitable format to serve json
-
-        echo json_encode(array(
+        $credentials = array(
             'username' => $_POST['username'],
             'password' => $_POST['password']
-        ));
-    }
+        );
 
-    public function logout() {
-        /*
-         * TODO: Logout model
-         */
+        $user = $this->user_model->getByCredentials($credentials);
+
+        if ($user) {
+            // We got a user matching the given credentials, let's store the user id in a session,
+            // so backend knows that that specific user is authenticated
+            $this->ob_auth->setId($user->id);
+        }
+
+        $this->response(!!($user !== null));
     }
 
     public function register() {
-        /*
-         * TODO: Registration model
-         */
+ 
+         $this->load->model('user_model');
+        
+         $data = to_object($this->input->post('data'));
+         $state = $this->user_model->register($data);
+         
+         $this->response($state);
     }
-    
+
     public function isUniqueUsername() {
-        echo json_encode(true);
+       
+        $username = $this->input->post('username');
+        
+        $this->load->model('user_model');
+        $isUnique = $this->user_model->isUniqueUsername($username);
+        
+        $data = ($isUnique) ? null : 'This username is already used';
+        $this->response($isUnique, $data);
     }
 
 }
