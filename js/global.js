@@ -77,9 +77,16 @@ OB.Bootloader = function($) {
     };
 
     this.adjustContainers = function() {
+        
         var container = $('.min-height-bottom');
+        
+        if (!container.length) {
+            return;
+        }
+        
         var offset = container.offset().top;
         container.height($(window).height() - offset);
+        
     };
 
     // called when boatloader does it's initial steps

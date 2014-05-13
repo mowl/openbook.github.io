@@ -33,6 +33,6 @@
     border-right: 1px solid #ddd;
 }
 
-.navbar {
+.navbar-no-margin {
     margin-bottom: 0px !important;
 }
