@@ -30,8 +30,7 @@
 }
 
 .shadow-right-container {
-    -webkit-box-shadow: 1px 0 5px -2px #000;
-            box-shadow: 1px 0 5px -2px #000;
+    border-right: 1px solid #ddd;
 }
 
 .navbar {
