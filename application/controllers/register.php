@@ -4,7 +4,7 @@ class Register extends OB_Public_Controller {
     
     public function index() {
         $css = array('register.css');
-        $js = array('register.js');
+        $js = array('view/register.js');
         
         $this->load->view('templates/header_view', array('css' => $css, 'js' => $js));
         $this->load->view('components/navbar_general_view');

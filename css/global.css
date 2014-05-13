@@ -18,3 +18,7 @@
     font-size: 18px;
     color: #fff !important;
 }
+
+.opacity-zero {
+    opacity: 0;
+}
