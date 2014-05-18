@@ -41,8 +41,11 @@
 
                     </div>
                 </div>
-
-                <button type="submit" class="btn btn-primary pull-right" onclick="return false;" id="registerButton">Register me</button>
+                
+                <div class="buttonContainer">
+                    <button type="submit" class="btn btn-primary pull-right" onclick="return false;" id="registerButton">Register me</button>
+                    <button type="submit" class="btn btn-default pull-right" onclick="return false;" id="goBackButton">Go back</button>
+                </div>
             </form>
 
         </div>

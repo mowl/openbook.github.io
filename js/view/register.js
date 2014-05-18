@@ -5,6 +5,47 @@
     this.timeout = null;
     this.xhr = null;
     
+    this.toggleAnimation = function(state) {
+        
+        var validateUsername = $('#validateUsername');
+        var registrationContainer = $('#registrationContainer');
+        
+        if(state)
+        {
+            validateUsername.animate({
+                opacity: 1,
+                'margin-top': 0
+            }, 200, function() {
+                
+                validateUsername.show();
+                
+                registrationContainer.hide().animate({
+                    opacity: 0,
+                    'margin-top': -50
+                }, 200);
+                
+            });
+        } else {
+            validateUsername.animate({
+                opacity: 0,
+                'margin-top': -50
+            }, 200, function() {
+                
+                validateUsername.hide();
+                
+                registrationContainer.css('opacity', 0).show().animate({
+                    opacity: 1,
+                    'margin-top': 0
+                }, 200);
+            });
+        }
+    };
+    
+    this.onGoBack = function() {
+        toggleAnimation(true);
+        $('#userNameError').text(""); // Reset error message
+    };
+    
     this.onUniqueUsernameResponse = function(response) {
     
         if (response.status) {
@@ -13,22 +54,7 @@
             var usernameField = $('#inputUsername');
             username = usernameField.val();
             
-            var validateUsername =  $('#validateUsername');
-            var registrationContainer = $('#registrationContainer');
-            
-            validateUsername.animate({
-                opacity: 0, 
-                'margin-top': -50
-            }, 200, function() {
-                
-                validateUsername.hide();
-                
-                registrationContainer.css('opacity', 0).show().animate({
-                    opacity: 1, 
-                    'margin-top': 0
-                }, 200);
-                
-            });
+            toggleAnimation(false);
             
         } else {
             
@@ -84,6 +110,7 @@
     $(document).ready(function() {
         
         $('#inputUsername').on('keyup', onUsernameChange);
+        $('#goBackButton').on('click', onGoBack);
         $('#registerButton').on('click', onRegisterAttempt);
         
     });

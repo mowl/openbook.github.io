@@ -7,6 +7,10 @@
     display: none;
 }
 
+.buttonContainer button {
+    margin-left: 15px;
+}
+
 #userNameError {
     margin-top: 6px;
     font-size: 13px;
