@@ -12,18 +12,13 @@
         
         if(state)
         {
-            validateUsername.animate({
-                opacity: 1,
-                'margin-top': 0
-            }, 200, function() {
-                
-                validateUsername.show();
-                
-                registrationContainer.hide().animate({
-                    opacity: 0,
-                    'margin-top': -50
-                }, 200);
-                
+            registrationContainer.slideUp(200, function() {
+                registrationContainer.hide();
+                validateUsername.css({
+                   opacity: 1,
+                   'margin-top': 0
+                });
+                validateUsername.slideDown(200);
             });
         } else {
             validateUsername.animate({
